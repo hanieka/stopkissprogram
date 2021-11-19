@@ -83,6 +83,54 @@ p {
   margin-bottom: 1rem;
 }
 
+.logo-image {
+	max-width: 20rem;
+	margin: 1rem;
+}
+		
+		
+		dl.cast-list {
+			font-size: 1rem;
+			width: 20rem;
+			margin-left:1.5rem;
+		}
+
+		dl.cast-list div {
+			/* Setup the DT (character) and DD (cast) items as a flexible layout. */
+			display: flex ;
+			margin: 5px 0px 5px 0px ;
+		}
+
+		dl.cast-list dt {
+			/*
+				Setup the DT element as a NESTED flexible layout. This will control the
+				IMPLICIT TEXT element (character) and the :after pseudo-element (dots)
+				layouts.
+			*/
+			display: flex ;
+			/* Setup the DT (character) element to grow and take-up space. */
+			flex: 1 1 auto ;
+			margin: 0px 0px 0px 0px ;
+		}
+
+		dl.cast-list dt:after {
+			border-bottom: 2px dotted #787878 ;
+			content: "" ;
+			/*
+				Setup the pseudo-element (dots) to grow and take-up space. This will fill
+				the white-space with "dots" because it growing inside of another layout
+				which is also growing.
+			*/
+			flex: 1 1 auto ;
+			margin: 0px 12px 5px 12px ;
+		}
+
+		dl.cast-list dd {
+			/* Setup the DD (cast) element to shrink, allow for dots to fill space. */
+			flex: 0 1 auto ;
+			margin: 0px 0px 0px 0px ;
+		}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -2759,15 +2807,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
 }
 
 .btn-danger:hover {
-  color: #fff;
-  background-color: #c82333;
-  border-color: #bd2130;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
 }
 
 .btn-danger:focus, .btn-danger.focus {
@@ -2796,35 +2844,37 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
+	width: 300px;
 }
 
 .btn-light:hover {
-  color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
+	width: 300px;
 }
 
 .btn-light:focus, .btn-light.focus {
-  color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
   box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
 .btn-light.disabled, .btn-light:disabled {
-  color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
-  color: #212529;
-  background-color: #dae0e5;
-  border-color: #d3d9df;
+  color: #9E025D;
+  background-color: #ffffff;
+  border-color: #9E025D;
 }
 
 .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
